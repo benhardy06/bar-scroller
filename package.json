@@ -1,0 +1,11 @@
+{
+  "name": "bar-scroller",
+  "version": "1.0.0",
+  "description": "auto scroll to position on bar click",
+  "main": "index.hmtl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ben hardy",
+  "license": "ISC"
+}
