@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+<title>Digital Brochure</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="node_modules/angular/angular.min.js"></script>
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/bar-indicator.css">
+</head>
+
+<body ng-controller="mainController" off-top>
+<div ng-repeat="item in sections" class="container-fluid menu-anchor" ng-attr-id="{{item.link}}"></div>  
+
+
+<div class="bar-indicator">
+    <div class="line" ng-repeat="item in sections" ng-class="{active:item.active}" ng-click="move(item.link); updateBar(item.section)"></div>          
+</div> 
+  <!-- Modules -->
+<script src="js/app.js"></script>
+  <!-- Controllers -->
+<script src="js/controllers/main.controller.js"></script>
+  <!-- Services -->
+<script src="js/services/main.service.js"></script>
+  <!-- Directives -->
+<script src="js/directives/top.directive.js"></script>
+  <!-- Routes -->
+  <script src="js/routes/main.routes.js"></script>
+    <!-- Filters -->
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+ .bar-indicator{
+     position: fixed;
+     top: 50%;
+     z-index: 1;
+     color: #333333;
+     right: 10px;
+     width:30px;
+} 
+.bar-indicator .line{
+     position:relative;
+     width:20px;
+     cursor:pointer;
+     float:right;
+     height:10px;
+}
+ .bar-indicator .line:after {
+     position: absolute;
+     right: 0;
+     top: 4px;
+     height: 2px;
+     background: #BE1E2D;
+     content: "";
+     width: 100%;
+     display: block;
+     transition: 0.5s;
+     float:right;
+}
+ .bar-indicator .line.active:after{
+     width:30px;
+     background: #242424;
+}
+ .bar-indicator .line.active:last-child:after{
+     background: #ffffff;
+}
