@@ -29,6 +29,3 @@
      width:30px;
      background: #242424;
 }
- .bar-indicator .line.active:last-child:after{
-     background: #ffffff;
-}

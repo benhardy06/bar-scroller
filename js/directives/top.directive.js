@@ -11,11 +11,13 @@ app.directive('offTop', ['$window','$timeout', 'sectionData', function($window, 
             
                 for (var i = 0; i < menuAnchors.length; i++) {
                     var top = menuAnchors[i].getClientRects()[0].top;
-                    if (top == 0) break;
+                    if (top >= 0 && top <= 10) break;
                 }
             
             if (i >= 0 && i < menuAnchors.length && enableScroll != false) {
+                
                 sectionData.changeActive(i + 1);
+               
                 enableScroll = false
             }
             $timeout(function() {
