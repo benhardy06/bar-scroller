@@ -15,7 +15,7 @@
 
 
 <div class="bar-indicator">
-    <div class="line" ng-repeat="item in sections" ng-class="{active:item.active}" ng-click="move(item.link); updateBar(item.section)"></div>          
+    <div class="line" ng-repeat="item in sections" ng-class="{current:item.active, dark:item.dark && item.active}" ng-click="move(item.link);"></div>          
 </div> 
   <!-- Modules -->
 <script src="js/app.js"></script>
