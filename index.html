@@ -11,7 +11,7 @@
 </head>
 
 <body ng-controller="mainController" off-top>
-<div ng-repeat="item in sections" class="container-fluid menu-anchor" ng-attr-id="{{item.link}}"></div>  
+<div ng-repeat="item in sections" class="container-fluid menu-anchor section" ng-class="{dark:item.dark}" ng-attr-id="{{item.link}}"><h2>Section {{item.section}}</h2></div>  
 
 
 <div class="bar-indicator">

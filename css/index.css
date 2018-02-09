@@ -1,7 +1,20 @@
 .container-fluid{
   height:100vh;
 }
-
+h2{
+    margin:auto;
+    left:0;
+    right:0;
+    position:absolute;
+    width: 140px;
+    top:50%
+}
+.section{
+    position:relative;
+}
+.section.dark{
+    color:#ffffff;
+}
 #sec-1{
     background-color:#444247
 }

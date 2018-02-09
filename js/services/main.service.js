@@ -4,7 +4,7 @@ app.service('sectionData', function() {
             section:'1',
             link: 'sec-1',
             active: true,
-            dark:true
+            dark:true,
         },
         {
             section:'2',
