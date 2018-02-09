@@ -25,7 +25,11 @@
      transition: 0.5s;
      float:right;
 }
- .bar-indicator .line.active:after{
+ .bar-indicator .line.current:after{
      width:30px;
      background: #242424;
+}
+ .bar-indicator .line.dark:after{
+     width:30px;
+     background: #ffffff;
 }

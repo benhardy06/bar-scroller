@@ -6,20 +6,15 @@ app.directive('offTop', ['$window','$timeout', 'sectionData', function($window, 
             var event = window.event || event;
             var data = event.wheelDelta || -event.detail;
             var menuAnchors = document.getElementsByClassName('menu-anchor')
-                var arr = []
                 for (var i = 0; i < menuAnchors.length; i++) {
                     var top = menuAnchors[i].getClientRects()[0].top;
-                    arr.push['i']; 
-                    if (top >= 0 && top <= 100){
-                        var current = i
-                    }
+                    if (top >= 0) break;
                     
                 }
             if (i >= 0 && i < menuAnchors.length && enableScroll != false) {
-                sectionData.changeActive(current + 1);
+                sectionData.changeActive(i + 1);
                
                 enableScroll = false
-                i=null
             }
             $timeout(function() {
                 enableScroll = true
@@ -28,6 +23,5 @@ app.directive('offTop', ['$window','$timeout', 'sectionData', function($window, 
         scope.$on('$destroy', function() {
             angular.element($window).unbind('scroll', scrollEffect)
         });
-
     }
 }])

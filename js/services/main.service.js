@@ -3,53 +3,52 @@ app.service('sectionData', function() {
     this.sections = [{
             section:'1',
             link: 'sec-1',
-            active: true
+            active: true,
+            dark:true
         },
         {
             section:'2',
             link: 'sec-2',
-            active: false
+            active: false,
+            dark:false
         },
         {
             section:'3',
             link: 'sec-3',
-            active: false
+            active: false,
+            dark:false
         },
         {
             section:'4',
             link: 'sec-4',
-            active: false
+            active: false,
+            dark:false
         },
         {
             section:'5',
             link: 'sec-5',
-            active: false
+            active: false,
+            dark:false
         },
         {
             section:'6',
             link: 'sec-6',
-            active: false
+            active: false,
+            dark:true
         },
         {
             section:'7',
             link: 'sec-7',
-            active: false
+            active: false,
+            dark:false
         },
         {
             section:'8',
             link: 'sec-8',
-            active: false
+            active: false,
+            dark:false
         }                          
     ]
-    
-    this.changeActive = function(value) {
-        for (var i = 0; i < this.sections.length; i++) {
-            this.sections[i].active = false;
-
-        }
-        this.sections[value-1].active = true;
-    }
-    
     
     this.changeActive = function(value) {
         for (var i = 0; i < this.sections.length; i++) {
