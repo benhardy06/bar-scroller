@@ -8,17 +8,12 @@ app.directive('offTop', ['$window','$timeout', 'sectionData', function($window, 
             var event = window.event || event;
             var data = event.wheelDelta || -event.detail;
             var menuAnchors = document.getElementsByClassName('menu-anchor')
-            if (data < 0) {
+            
                 for (var i = 0; i < menuAnchors.length; i++) {
                     var top = menuAnchors[i].getClientRects()[0].top;
-                    if (top >= 50) break;
+                    if (top == 0) break;
                 }
-            } else {
-                for (var i = menuAnchors.length - 1; i >= 0; i--) {
-                    var top = menuAnchors[i].getClientRects()[0].top;
-                    if (top < -500) break;
-                }
-            }
+            
             if (i >= 0 && i < menuAnchors.length && enableScroll != false) {
                 sectionData.changeActive(i + 1);
                 enableScroll = false
