@@ -8,8 +8,7 @@ app.directive('offTop', ['$window','$timeout', 'sectionData', function($window, 
             var menuAnchors = document.getElementsByClassName('menu-anchor')
                 for (var i = 0; i < menuAnchors.length; i++) {
                     var top = menuAnchors[i].getClientRects()[0].top;
-                    if (top >= 0) break;
-                    
+                    if (top >= 0) break;  
                 }
             if (i >= 0 && i < menuAnchors.length && enableScroll != false) {
                 sectionData.changeActive(i + 1);
