@@ -15,9 +15,7 @@ app.directive('offTop', ['$window','$timeout', 'sectionData', function($window, 
                     }
                     
                 }
-            console.log(arr)
             if (i >= 0 && i < menuAnchors.length && enableScroll != false) {
-                console.log(i+1)
                 sectionData.changeActive(current + 1);
                
                 enableScroll = false
